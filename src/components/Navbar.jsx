@@ -120,7 +120,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search..."
-              className="w-full bg-transparent border-0 text-white placeholder-white py-1 flex-1 text-sm  
+              className="w-full bg-transparent border-0 text-white placeholder-white py-1 flex-1                  
                 focus:outline-none text-sm"
             />
             <FaSearch className="text-white text-lg ml-2" />
