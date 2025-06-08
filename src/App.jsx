@@ -3,6 +3,8 @@ import Navbar from './components/Navbar.jsx';
 import Banner from './components/Banner.jsx';
 import Wws from './components/Wws.jsx';
 import Om from './components/Om.jsx';
+import Wts from './components/Wts.jsx';
+import Footer from './components/Footer.jsx';
 
 
 const App = () => {
@@ -19,9 +21,14 @@ const App = () => {
       <div className='w-full'>
         <Wws/>
         <Om/>
+        <Wts/>
       </div>
 
     </main>
+
+    <div className='mt-auto'>
+      <Footer />
+    </div>
     </div>
   );
 }

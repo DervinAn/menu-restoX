@@ -41,10 +41,15 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4 lg:space-x-8">
           {menuItems.map((item, index) => (
             <button
-              key={index}
-              className="flex items-center space-x-2 text-black hover:text-orange-600
-              transition-all duration-300 focus:outline-none group"
-            >
+                key={index}
+                onClick={() => {
+                  const element = document.getElementById(item.label.toLowerCase().replace(/\s+/g, '-'));
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="flex items-center space-x-2 text-black hover:text-orange-600 ..."
+              >
               <span className="text-lg transition-transform group-hover:scale-125">
                 {item.icon}
               </span>
@@ -98,14 +103,21 @@ const Navbar = () => {
       </nav>
 
       {/* MOBILE MENU */}
-      <div className={`md:hidden absolute top-[80px] left-0 right-0 mx-4 bg-gradient-to-b from-yellow-400 to-orange-500
+      <div className={`md:hidden fixed top-[80px] left-0 right-0 mx-4 bg-gradient-to-b from-yellow-400 to-orange-500
         rounded-2xl shadow-xl transition-all duration-300 z-40
         ${isOpen ? "opacity-100 visible scale-100" : "opacity-0 invisible scale-95"}`}>
 
         <div className="p-4 space-y-4">
           {menuItems.map((item, index) => (
             <button
-              key={index}
+               key={index}
+                onClick={() => {
+                   setIsOpen(!isOpen)
+                  const element = document.getElementById(item.label.toLowerCase().replace(/\s+/g, '-'));
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               className="w-full flex items-center space-x-3
               text-white hover:bg-white/20 px-4 py-3 rounded-xl transition duration-200 focus:outline-none"
             >
@@ -120,7 +132,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search..."
-              className="w-full bg-transparent border-0 text-white placeholder-white py-1 flex-1                  
+              className="w-full bg-transparent border-0 text-white placeholder-white py-1 flex-1 
                 focus:outline-none text-sm"
             />
             <FaSearch className="text-white text-lg ml-2" />

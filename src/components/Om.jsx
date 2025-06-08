@@ -26,7 +26,7 @@ const Om = () => {
   const [selectedItem, setSelectedItem] = useState(menuItems[0]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to bg-yellow-50 py-12 px-4 sm:py-6 md:px-8 lg:px-8 flex flex-col md:flex-col lg:flex-row items-center gap-8">
+    <div id="menu" className="min-h-screen bg-gradient-to-b from-orange-50 to bg-yellow-50 py-12 px-4 sm:py-6 md:px-8 lg:px-8 flex flex-col md:flex-col lg:flex-row items-center gap-8">
       {/* LEFT SIDE BAR */}
       <div className="w-full md:w-3/4 lg:w-1/4 bg-white p-4 md:p-6 rounded-3xl shadow-lg border-amber-300">
         <h1 className="text-3xl md:text-4xl font-pacifico text-amber-600 mb-4 md:mb-6 text-center">
@@ -116,6 +116,21 @@ const Om = () => {
                         >
                             <FaChevronRight />
                         </button>
+                        </div>
+                        {/*ADDITIONAL ICONS */}
+                        <div className="mt-4 md:mt-6 flex items-center space-x-3 md:space-x-4 ">
+                          <div className="flex items-center justify-center p-2 md:p-3 bg-white rounded-full shadow-xl 
+                          transform hover:scale-scale-110">
+                            <FaHeart className="text-red-500" size={20}/> 
+                          </div>
+                          <div className="flex items-center justify-center p-2 md:p-3 bg-white rounded-full shadow-xl 
+                          transform hover:scale-scale-110">
+                            <FaStar className="text-blue-500" size={20}/> 
+                          </div>
+                          <div className="flex items-center justify-center p-2 md:p-3 bg-white rounded-full shadow-xl 
+                          transform hover:scale-scale-110">
+                            <FaShareAlt className="text-yallow-500" size={20}/> 
+                          </div>
                         </div>
             </div>
     </div>

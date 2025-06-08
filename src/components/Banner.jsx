@@ -14,7 +14,7 @@ const Banner = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <div className="bg-white pt-12 md:pt-16 min-h-[500px] flex items-center">
+   <div id="home" className="bg-white pt-12 md:pt-16 min-h-[500px] flex items-center">
       {/* Video Modal */}
       {showVideo && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">

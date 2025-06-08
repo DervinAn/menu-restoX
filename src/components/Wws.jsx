@@ -6,7 +6,7 @@ import wws3 from "../assets/wws3.png";
 
 const Wws = () => {
   return (
-  <div className='w-full min-h-screen bg-gradient-to-r from-red-50 to-yellow-50
+  <div id="services" className='w-full min-h-screen bg-gradient-to-r from-red-50 to-yellow-50
   px-4 sm:px-6 lg:px-20 py-12 md:py-20 xl:py-24'>
         <div className=' mx-auto text-center max-w-7xl'>
             <h2 className='text-xl sm:text-3xl lg:text-4xl font-bold text-red-600 uppercase
